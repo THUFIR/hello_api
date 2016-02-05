@@ -37,22 +37,17 @@
       events "passed", "skipped", "failed", "standardOut", "standardError"
     }
   }
-  
-  
+
+
   jar  {
     manifest {
       //attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloLibrary'   //no main class, API
+      //attributes ("Fw-Version" : "0.00.01", "${parent.manifestSectionName}")
+      //attribues 'Fw-version': '0.00.01'
     }
+//    basename 'hello_api'
   }
 
-
-/*
-  startScripts  {
-    manifest {
-      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
-    }
-  }
-*/
 
 
 task wrapper(type: Wrapper) {
