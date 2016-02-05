@@ -45,7 +45,8 @@
       //attributes ("Fw-Version" : "0.00.01", "${parent.manifestSectionName}")
       //attribues 'Fw-version': '0.00.01'
     }
-//    basename 'hello_api'
+	baseName='hello_api'
+	version'latest'
   }
 
 
