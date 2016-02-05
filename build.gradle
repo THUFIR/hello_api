@@ -5,8 +5,7 @@
 
 //      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
 
-
-    
+   
 // In this section you declare where to find the dependencies of your project
     repositories {
     mavenCentral()
@@ -42,7 +41,7 @@
   
   jar  {
     manifest {
-      attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloWorld'
+      //attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloLibrary'   //no main class, API
     }
   }
 
