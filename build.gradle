@@ -1,0 +1,57 @@
+// Apply the java plugin to add support for Java
+  apply plugin: 'java'
+  apply plugin: 'application'
+
+
+//      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
+
+
+    
+// In this section you declare where to find the dependencies of your project
+    repositories {
+    mavenCentral()
+  }
+  
+  sourceSets {
+    main {
+      java {
+        srcDirs 'src/main/' // where the main code is
+      }
+    }
+    
+    test {
+      java {
+        srcDir 'src/test/' // tests for all the main code
+      }
+    }
+  }
+  
+// In this section you declare the dependencies for your production and test code
+  dependencies {      
+    //testCompile 'junit:junit:4.11'
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+  }
+  
+  test {
+    testLogging {
+      events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+  }
+  
+  
+  jar  {
+    manifest {
+      attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloWorld'
+    }
+  }
+
+  startScripts  {
+    manifest {
+      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
+    }
+  }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4.3'
+}
