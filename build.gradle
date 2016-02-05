@@ -1,6 +1,6 @@
 // Apply the java plugin to add support for Java
   apply plugin: 'java'
-  apply plugin: 'application'
+//  apply plugin: 'application'
 
 
 //      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
@@ -46,11 +46,15 @@
     }
   }
 
+
+/*
   startScripts  {
     manifest {
       attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
     }
   }
+*/
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.4.3'
