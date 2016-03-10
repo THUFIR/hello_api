@@ -1,4 +1,4 @@
-package net.bounceme.mordor.hello;
+package net.bounceme.mordor.hello.library;
 
 public class HelloLibrary {
 
