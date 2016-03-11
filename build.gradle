@@ -33,7 +33,7 @@
     manifest {
     }
 	baseName='hello_api'
-	version'current'
+	version'dev'
   }
 
 
