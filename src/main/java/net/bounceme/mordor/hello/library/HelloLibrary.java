@@ -1,10 +1,13 @@
 package net.bounceme.mordor.hello.library;
 
-import java.util.Arrays;
-
 public class HelloLibrary {
 
     public String hello(String... args) {
-        return "hello world " + Arrays.toString(args);
+        StringBuilder sb = new StringBuilder();
+        sb.append("hello world ");
+        for (String str : args) {
+            sb.append(str + " ");
+        }
+        return sb.toString();
     }
 }
