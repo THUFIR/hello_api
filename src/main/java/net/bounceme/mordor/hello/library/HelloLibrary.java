@@ -5,6 +5,6 @@ import java.util.Arrays;
 public class HelloLibrary {
 
     public String hello(String... args) {
-        return "hello " + Arrays.toString(args);
+        return "hello world " + Arrays.toString(args);
     }
 }
